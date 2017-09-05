@@ -68,8 +68,8 @@ public class TabUtils {
         }
         //TODO 暂时不做阴影效果
 //        tv.setTextSize(18);
-        tv.setTypeface(tf);
-        tv.setShadowLayer(radius, dx, dy, color);
+//        tv.setTypeface(tf);
+//        tv.setShadowLayer(radius, dx, dy, color);
     }
 
     private static TextView getTextView(TabLayout.Tab tab) {

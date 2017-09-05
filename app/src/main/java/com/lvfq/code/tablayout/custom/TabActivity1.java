@@ -43,17 +43,11 @@ public class TabActivity1 extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabSelectAdapter() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-//                TabUtils.tabSelect(tabLayout, tab);
-                TabUtils.tabBoldCurrent(tabLayout, tab);
+                TabUtils.tabSelect(tabLayout, tab);
+//                TabUtils.tabBoldCurrent(tabLayout, tab);
 //                int tag = (int) tab.getTag();
 //                LvToastUtil.showToast(TabActivity1.this, tag + "");
 
-            }
-        });
-        tabLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                TabUtils.setIndicator(tabLayout, 10, 10);
             }
         });
     }

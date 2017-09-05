@@ -6,22 +6,26 @@
     android:orientation="vertical">
 
 
-    <com.lvfq.code.tablayout.custom.UnAnimTabLayout
-        android:id="@+id/tab"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:clipToPadding="false"
-        android:paddingLeft="5dp"
-        app:tabBackground="@drawable/tab_selector_green"
-        app:tabIndicatorColor="@android:color/white"
-        app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="0dp"
-        app:tabMinWidth="0dp"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextAppearance="@style/tab_text_size"
-        app:tabTextColor="@android:color/black" />
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <com.lvfq.code.tablayout.custom.UnAnimTabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_gravity="center_vertical"
+            android:clipToPadding="false"
+            app:tabBackground="@drawable/tab_selector_green"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/tab_text_size"
+            app:tabTextColor="@android:color/black" />
+    </LinearLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
