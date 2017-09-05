@@ -13,9 +13,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lvfq.code.R;
 import com.lvfq.code.dynamic.CircleMovementMethod;
 import com.lvfq.code.dynamic.data.UserBean;
-import com.lvfq.myworkingtest.R;
 
 import java.util.List;
 

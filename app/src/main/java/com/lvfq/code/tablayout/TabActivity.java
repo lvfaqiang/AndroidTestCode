@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import com.lvfq.code.R;
 import com.lvfq.library.utils.LvV;
-import com.lvfq.myworkingtest.R;
 
 /**
  * TabActivity

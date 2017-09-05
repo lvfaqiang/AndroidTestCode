@@ -8,10 +8,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.lvfq.code.R;
 import com.lvfq.code.dynamic.view.MultiImageView;
 import com.lvfq.library.utils.LvToastUtil;
 import com.lvfq.library.utils.LvV;
-import com.lvfq.myworkingtest.R;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 

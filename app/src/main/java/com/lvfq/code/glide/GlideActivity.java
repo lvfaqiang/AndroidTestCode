@@ -5,10 +5,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ImageView;
 
-import com.lvfq.library.utils.LvV;
-import com.lvfq.myworkingtest.R;
+import com.lvfq.code.R;
 import com.lvfq.code.dynamic.Data;
-import com.lvfq.myworkingtest.util.GlideApp;
+import com.lvfq.code.util.GlideApp;
+import com.lvfq.library.utils.LvV;
 
 /**
  * GlideActivity

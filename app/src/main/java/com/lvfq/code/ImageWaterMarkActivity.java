@@ -20,7 +20,6 @@ import android.widget.ImageView;
 
 import com.lvfq.code.util.FileUtils;
 import com.lvfq.code.util.ImageUtils;
-import com.lvfq.myworkingtest.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;

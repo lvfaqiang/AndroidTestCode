@@ -8,9 +8,9 @@ import android.widget.Toast;
 
 import com.lvfq.code.BaseActivity;
 import com.lvfq.code.ModelBean;
-import com.lvfq.code.mvp.demo3.LoginPresenter3;
-import com.lvfq.myworkingtest.R;
+import com.lvfq.code.R;
 import com.lvfq.code.http.HttpClient;
+import com.lvfq.code.mvp.demo3.LoginPresenter3;
 import com.lvfq.code.mvp.demo3.LoginView3;
 
 import retrofit2.Call;

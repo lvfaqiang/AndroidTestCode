@@ -9,12 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.lvfq.code.R;
 import com.lvfq.code.dynamic.data.CommentsBean;
 import com.lvfq.code.dynamic.data.UserBean;
+import com.lvfq.code.dynamic.view.CommentsView;
 import com.lvfq.code.dynamic.view.LikesView;
 import com.lvfq.library.utils.LvV;
-import com.lvfq.myworkingtest.R;
-import com.lvfq.code.dynamic.view.CommentsView;
 
 /**
  * CommentsActivity

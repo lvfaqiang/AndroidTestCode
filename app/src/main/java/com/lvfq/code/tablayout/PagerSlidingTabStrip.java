@@ -39,7 +39,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lvfq.myworkingtest.R;
+import com.lvfq.code.R;
 
 import java.util.Locale;
 

@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lvfq.code.mvp.demo3.LoginPresenter3;
-import com.lvfq.myworkingtest.R;
 import com.lvfq.code.mvp.demo3.LoginView3;
 
 public class MainActivity extends BaseActivity<LoginView3, LoginPresenter3> implements LoginView3 {
