@@ -2,11 +2,11 @@ package com.lvfq.code.dynamic;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.lvfq.code.R;
@@ -30,6 +30,7 @@ public class CommentsActivity extends AppCompatActivity {
 
     private CommentsView commentView;
     private LikesView likeView;
+    private MyThread thread;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +44,10 @@ public class CommentsActivity extends AppCompatActivity {
         likeView.setListener(new LikesView.onItemClickListener() {
             @Override
             public void onItemClick(int position, UserBean bean) {
-                new MyThread().start();
+                Log.i("lfq", "thread status : " + thread.getState());
+                if (thread.getState() == Thread.State.RUNNABLE) {
+                    thread.handler.sendEmptyMessage(1);
+                }
             }
         });
         likeView.notifyDataSetChanged();
@@ -54,7 +58,9 @@ public class CommentsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position, CommentsBean bean) {
                 Log.i("lfq", Thread.currentThread().getName());
-                new MyThread().start();
+                thread = new MyThread();
+                thread.start();
+                Log.i("lfq", "thread status : " + thread.getState());
             }
         });
         commentView.notifyDataSetChanged();
@@ -65,20 +71,34 @@ public class CommentsActivity extends AppCompatActivity {
 
         @Override
         public void run() {
-//            Looper.prepare();
-            handler = new Handler(getMainLooper()) {
+            // 方式一， 本质还是子线程，不能用来操作 UI ,
+            Looper.prepare();
+            handler = new Handler() {
                 @Override
                 public void handleMessage(Message msg) {
+                    Log.i("lfq", msg.what + " , mas.what");
                     if (msg.what == 1) {
                         Log.i("lfq", msg.what + " , mas.what");
                         Toast.makeText(CommentsActivity.this, Thread.currentThread().getName(), Toast.LENGTH_SHORT).show();
-                        commentView.setVisibility(View.GONE);
+//                        commentView.setVisibility(View.GONE);
                     }
                 }
             };
 
-            handler.sendEmptyMessage(1);
-//            Looper.loop();
+            Looper.loop();
+
+            // 方式二， 作用于 主线程。可以操作 UI
+//            handler = new Handler(getMainLooper()) {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    Log.i("lfq", msg.what + " , mas.what");
+//                    if (msg.what == 1) {
+//                        Log.i("lfq", msg.what + " , mas.what");
+//                        Toast.makeText(CommentsActivity.this, Thread.currentThread().getName(), Toast.LENGTH_SHORT).show();
+//                        commentView.setVisibility(View.GONE);
+//                    }
+//                }
+//            };
 
         }
     }
