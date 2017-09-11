@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.ImageView;
 
 import com.lvfq.code.R;
-import com.lvfq.code.dynamic.Data;
-import com.lvfq.code.util.GlideApp;
 import com.lvfq.library.utils.LvV;
 
 /**
@@ -45,17 +43,12 @@ public class GlideActivity extends FragmentActivity {
 //                .apply(options)
 //                .into(iv_1);
 
-        GlideApp.with(this)
-                .load(Data.getImgs(1))
-                .fitCenter()
-                .into(iv_1);
+//        GlideApp.with(this)
+//                .load(Data.getImgs(1))
+//                .fitCenter()
+//                .into(iv_1);
 
 //        GlideApp.with(this).load(Data.getImgs(1)).into(iv_1);
-//        Glide4_ImageLoadUtil.loadImg(this, Data.getImgs(1), R.mipmap.img_default, iv_1);
-
-//        Glide4_ImageLoadUtil.loadCircleImg(this, Data.getImgs(1), R.mipmap.img_default, iv_2);
-//
-//        Glide4_ImageLoadUtil.loadRoundImg(this, Data.getImgs(1), R.mipmap.img_default, iv_3);
 
 
     }
