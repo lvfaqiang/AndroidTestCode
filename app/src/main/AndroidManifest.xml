@@ -11,21 +11,38 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.lvfq.code.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".permission.PermissionActivity">
+        <activity android:name=".service.demo.DownloadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name="me.lvfq.multi_image_selector.MultiImageSelectorActivity" />
         <activity android:name="me.lvfq.multi_image_selector.ImagePagerActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <!--
+        enabled 是否启用这个服务 ，
+        exported 是否允许除了当前程序之外的其他程序访问这个服务
+        -->
+        <service
+            android:name=".service.MyBindService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.demo.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

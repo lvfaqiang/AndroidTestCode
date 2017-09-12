@@ -20,6 +20,6 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        LvUtils.init(this);
+        LvUtils.init(this).initLog("lfq", true);
     }
 }
