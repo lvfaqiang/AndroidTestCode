@@ -17,7 +17,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".design.DesignActivity" android:label="这是用来测试标题栏的内容">
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:label="这是用来测试标题">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,6 +43,10 @@
             android:exported="true" />
         <service
             android:name=".service.demo.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".alarm.AlarmService"
             android:enabled="true"
             android:exported="true"></service>
     </application>
