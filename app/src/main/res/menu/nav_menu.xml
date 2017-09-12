@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_menu_1"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜单1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_menu_2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜单2"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_menu_3"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜单3"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_menu_4"
+        android:icon="@mipmap/ic_launcher"
+        android:title="菜单4"
+        app:showAsAction="ifRoom" />
+</menu>
