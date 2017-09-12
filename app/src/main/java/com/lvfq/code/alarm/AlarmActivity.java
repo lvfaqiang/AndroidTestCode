@@ -2,6 +2,7 @@ package com.lvfq.code.alarm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -51,6 +52,7 @@ public class AlarmActivity extends AppCompatActivity {
                 return true;
             }
             finish();
+            android.os.Process.killProcess(Process.myPid());
             System.exit(0);
 
         }

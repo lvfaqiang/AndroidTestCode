@@ -11,8 +11,6 @@ import android.os.SystemClock;
 import com.lvfq.library.utils.LvLog;
 
 public class AlarmService extends Service {
-    public AlarmService() {
-    }
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -23,22 +21,24 @@ public class AlarmService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         LvLog.i("服务已启动。。。");
         new Thread(new Runnable() {
-//            Handler handler = new Handler();
-
             @Override
             public void run() {
                 LvLog.i("我还在。。。");
             }
         }).start();
         AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        long mill = SystemClock.elapsedRealtime() + (10 * 1000);
+        int hour = 10 * 1000;
+        long mill = SystemClock.elapsedRealtime() + hour;
+
         Intent in = new Intent(this, AlarmService.class);
-        PendingIntent pi = PendingIntent.getActivity(this, 0, in, 0);
+        PendingIntent pi = PendingIntent.getService(this, 0, in, 0);
+        manager.cancel(pi);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            manager.setExact(AlarmManager.RTC_WAKEUP, mill, pi);
+            manager.setExact(AlarmManager.ELAPSED_REALTIME_WAKEUP, mill, pi);
         } else {
-            manager.set(AlarmManager.RTC_WAKEUP, mill, pi);
+            manager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, mill, pi);
         }
+
         return super.onStartCommand(intent, flags, startId);
     }
 
