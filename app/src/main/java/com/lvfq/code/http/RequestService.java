@@ -2,11 +2,14 @@ package com.lvfq.code.http;
 
 import com.lvfq.code.ModelBean;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 /**
@@ -30,4 +33,15 @@ public interface RequestService {
 
     @GET("front/server")
     Call<ModelBean> serverInfo();
+
+    /**
+     * 测试文件上传
+     *
+     * @param value
+     * @param file
+     * @return
+     */
+    @Multipart
+    @POST("Synthesis/uploadLog")
+    Call<String> uploadFile(@Part("test") String value, @Part MultipartBody.Part file);
 }

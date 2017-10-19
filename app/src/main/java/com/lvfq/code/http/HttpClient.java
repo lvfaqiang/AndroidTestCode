@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * HttpClient
@@ -30,9 +30,11 @@ public class HttpClient {
             synchronized (HttpClient.class) {
                 if (service == null) {
                     service = new Retrofit.Builder()
-                            .baseUrl("http://192.168.0.107:8080/")
+//                            .baseUrl("http://192.168.0.107:8080/")
+                            .baseUrl("http://an.zdeps.com/index.php/")
                             .addConverterFactory(NobodyConverterFactory.create())
-                            .addConverterFactory(GsonConverterFactory.create())
+                            .addConverterFactory(ScalarsConverterFactory.create())
+//                            .addConverterFactory(GsonConverterFactory.create())
 //                            .client(new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
 //                                @Override
 //                                public Response intercept(Chain chain) throws IOException {
