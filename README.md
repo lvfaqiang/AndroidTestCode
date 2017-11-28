@@ -4,18 +4,19 @@
 ### Update Log:
  - 2017年11月28日
     
-    新增工厂类模式测试
+    [新增工厂类模式测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/factory)<br/>
+    [策略模式测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/strategy)
  - 2017年11月28日
  
     添加设计模式 package<br/>
-    Builder设计模式 <br/>
-    使用简单的 ImageLoader 测试 开闭原则，单一原则<br/>
-    单例模式（Single）测试
+    [Builder设计模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/builder)<br/>
+    使用简单的 [ImageLoader](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/imageload) 测试 开闭原则，单一原则<br/>
+    [单例模式（Single）](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/single)测试
  - 2017年11月21日
  
     新增 NotificationTestActivity <br/>
     用于 测试 Android 系统 Notification ,以及接收到推送之后，默认调用系统的 震动和提示音 
  - 2017年11月20日
  
-    新增 Kotlin 版本的 SwipeRefreshView <br/>
+    新增 Kotlin 版本的 [SwipeRefreshView](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/swipe) <br/>
     (SwipeRefreshLayout + RecyclerView + BaseRecyclerViewAdapterHelper)
