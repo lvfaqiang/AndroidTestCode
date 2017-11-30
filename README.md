@@ -2,10 +2,15 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年11月29日
+
+    [观察者模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/observer)<br/>
+    [责任链模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/dutychain)<br/>
+    [跳转手机百度、高德地图](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/map/MapActivity)
  - 2017年11月28日
     
-    [新增工厂类模式测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/factory)<br/>
-    [策略模式测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/strategy)
+    [工厂类模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/factory)<br/>
+    [策略模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/strategy)
  - 2017年11月28日
  
     添加设计模式 package<br/>
