@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical">
 
+    <com.lvfq.code.view.MustTextView
+        android:id="@+id/tv_must"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cus_isMust="true"
+        app:cus_symbolColor="@color/red"
+        app:cus_text="这是标题"
+        app:cus_textColor="@color/c_2b3857" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -34,7 +43,7 @@
         android:id="@+id/tv_click"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="click"
         android:layout_margin="20dp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="click" />
 </LinearLayout>

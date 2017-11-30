@@ -2,6 +2,9 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年11月30日
+ 
+    [带红色 * 号文本](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/view/MustTextView)(标注必选项)
  - 2017年11月29日
 
     [观察者模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/observer)<br/>

@@ -17,4 +17,20 @@
         <attr name="tabSelTextColor" format="color" />
         <attr name="tabDefTextColor" format="color" />
     </declare-styleable>
+
+    <!--带 * 标注的文本标题 View-->
+    <declare-styleable name="MustTextView">
+        <!--标题大小-->
+        <attr name="cus_textSize" format="dimension" />
+        <!--标题颜色-->
+        <attr name="cus_textColor" format="color|reference" />
+        <!--符号大小-->
+        <attr name="cus_symbolSize" format="dimension" />
+        <!--符号颜色-->
+        <attr name="cus_symbolColor" format="color|reference" />
+        <!--标题内容-->
+        <attr name="cus_text" format="string" />
+        <!--是否必选-->
+        <attr name="cus_isMust" format="boolean" />
+    </declare-styleable>
 </resources>
