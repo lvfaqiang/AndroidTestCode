@@ -2,14 +2,17 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年12月03日
+    
+    [备忘录模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/memo)(遗留问题：EditText复写之后，无法获取焦点)<br/>
  - 2017年11月30日
  
-    [带红色 * 号文本](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/view/MustTextView)(标注必选项)
+    [带红色 * 号文本](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/view/MustTextView.kt)(标注必选项)
  - 2017年11月29日
 
     [观察者模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/observer)<br/>
     [责任链模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/dutychain)<br/>
-    [跳转手机百度、高德地图](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/map/MapActivity)
+    [跳转手机百度、高德地图](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/map/MapActivity.kt)
  - 2017年11月28日
     
     [工厂类模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/factory)<br/>
