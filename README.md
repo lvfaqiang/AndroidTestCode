@@ -3,7 +3,8 @@
 
 ### Update Log:
  - 2017年12月05日
- 
+    
+    [优雅的停止线程](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/thread/ThreadMain.java)<br/> 
     [迭代器模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/iterator) <font color="blue"> - 摘自 Android源码设计模式解析与实战</font>
  - 2017年12月03日
     
