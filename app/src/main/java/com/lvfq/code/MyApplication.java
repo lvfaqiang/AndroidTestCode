@@ -1,6 +1,6 @@
 package com.lvfq.code;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 import com.lvfq.library.utils.LvUtils;
 
@@ -14,7 +14,7 @@ import com.lvfq.library.utils.LvUtils;
  * @desc :
  */
 
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {

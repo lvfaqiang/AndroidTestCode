@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.lvfq.code.designpatterns.memo.v2.MemoActivityV2">
+        <activity android:name="com.lvfq.code.service.ServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
