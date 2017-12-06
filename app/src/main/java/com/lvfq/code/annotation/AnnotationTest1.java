@@ -23,8 +23,4 @@ public class AnnotationTest1 extends FragmentActivity {
 
     }
 
-    @OnCusBusEvent(tag = "" )
-    private void mTest() {
-
-    }
 }

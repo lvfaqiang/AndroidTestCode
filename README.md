@@ -2,6 +2,10 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年12月06日
+ 
+    新增一个 javaLib ,用于测试自定义 ButterKnife <br/>
+    [代理模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/proxy)
  - 2017年12月05日
     
     [优雅的停止线程](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/thread/ThreadMain.java)<br/> 

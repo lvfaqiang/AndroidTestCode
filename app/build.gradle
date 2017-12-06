@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
@@ -18,12 +17,16 @@ android {
 //        jackOptions.enabled = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
         release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -38,13 +41,13 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
-//    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    //    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.lfq:AndroidUtils:1.1.6'
     compile 'com.lfq:MultiImageSelector:1.4'
     //    compile 'com.github.bumptech.glide:glide:4.0.0'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.zhy:base-rvadapter:3.0.3'
     compile 'com.github.bumptech.glide:glide:3.7.0'
@@ -55,4 +58,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    implementation project(':javaLib')
 }
