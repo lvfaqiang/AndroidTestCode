@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.lvfq.code.service.ServiceActivity">
+        <activity android:name="com.lvfq.code.proxy.demo.NotifyActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +30,14 @@
 
         <activity android:name="me.lvfq.multi_image_selector.MultiImageSelectorActivity" />
         <activity android:name="me.lvfq.multi_image_selector.ImagePagerActivity" />
+
+        <service
+            android:name=".aidl.BankService"
+            android:process="com.fq.BankService">
+            <intent-filter>
+                <action android:name="com.lvfq.code.aidl.BankService" />
+            </intent-filter>
+        </service>
 
         <service
             android:name=".service.MyService"

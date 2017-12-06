@@ -3,9 +3,11 @@
 
 ### Update Log:
  - 2017年12月06日
- 
+    
     新增一个 javaLib ,用于测试自定义 ButterKnife <br/>
-    [代理模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/proxy)
+    [AIDL跨进程通信](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/aidl)<br/>
+    [代理模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/proxy)<br/>
+    [Notification代理模式实战](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/proxy/demo)
  - 2017年12月05日
     
     [优雅的停止线程](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/thread/ThreadMain.java)<br/> 
