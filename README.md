@@ -2,6 +2,9 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年12月11日
+ 
+    [Dagger2 注入多个module](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/dagger2/Dagger2Activity.java)
  - 2017年12月07日
  
     [添加通用混淆代码](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/proguard-rules.pro)
