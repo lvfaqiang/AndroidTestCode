@@ -2,6 +2,8 @@ package com.lvfq.code.dagger2;
 
 import com.lvfq.library.utils.LvLog;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
@@ -19,10 +21,18 @@ import okhttp3.OkHttpClient;
 @Module
 public class HttpModule {
 
+//    @Singleton
     @Provides
     public OkHttpClient provideOkHttp() {
         LvLog.i("provideOkHttp: ");
         return new OkHttpClient.Builder().build();
+    }
+
+    @Singleton
+    @Provides
+    public ApiService provideApiService(OkHttpClient okHttpClient) {
+        LvLog.i("provideApiService: ");
+        return new ApiService(okHttpClient);
     }
 
 }

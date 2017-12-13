@@ -1,5 +1,7 @@
 package com.lvfq.code.dagger2;
 
+import com.lvfq.code.dagger2.annotation.ActivityScope;
+
 /**
  * Component
  *
@@ -10,6 +12,7 @@ package com.lvfq.code.dagger2;
  * @desc :
  */
 
+@ActivityScope
 @dagger.Component(modules = {UserModule.class}, dependencies = {HttpComponent.class})
 public interface Component {
     // 这里对 Module 和 Activity 进行关联

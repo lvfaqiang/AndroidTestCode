@@ -1,10 +1,11 @@
 package com.lvfq.code.dagger2;
 
-import com.lvfq.library.utils.LvLog;
+import com.lvfq.code.dagger2.annotation.CusAnnotation;
+
+import javax.inject.Named;
 
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.OkHttpClient;
 
 /**
  * UserModule
@@ -20,30 +21,31 @@ import okhttp3.OkHttpClient;
 public class UserModule {
 
 
-//    public UserModule(Context context) {
-//        this.context = context;
-//    }
-    //    @Provides
-//    public ApiService provideApiService(String url) {
-//        Log.i("UserModule", "provideApiService");
-//        return new ApiService(url);
-//    }
-
+    @Named("testUrl")
     @Provides
     public String provideUrl() {
         return "this is url";
     }
 
+    @CusAnnotation
+    @Provides
+    public String provideUrl1() {
+        return "url 1";
+    }
+
+
+//    @Named("dev")
 //    @Provides
-//    public String provideUrl1() {
-//        return "this is url2 -----";
+//    public ApiService provideApiService(OkHttpClient client) {
+//        return new ApiService(client);
+//    }
+//
+//    @Named("release")
+//    @Provides
+//    public ApiService provideApiService1(OkHttpClient client) {
+//        return new ApiService(client);
 //    }
 
-
-    @Provides
-    public ApiService provideApiService(OkHttpClient client) {
-        return new ApiService(client);
-    }
 
     /**
      * 这里的参数会从 当前 module 中查找 返回值为 String 的方法。拿到其结果。
@@ -53,10 +55,11 @@ public class UserModule {
      * @param url
      * @return
      */
-    @Provides
-    public UserManager provideUserManager(ApiService apiService, String url) {
-        LvLog.i("provideUserManager: ");
-        return new UserManager(apiService, url);
-    }
+//    @Named("url1")
+//    @Provides
+//    public UserManager provideUserManager(ApiService apiService, String url) {
+//        LvLog.i("provideUserManager: ");
+//        return new UserManager(apiService, url);
+//    }
 
 }

@@ -4,6 +4,7 @@
 ### Update Log:
  - 2017年12月11日
  
+    [Dagger2 Singleton ,自定义 Scope 测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/dagger2)<br/>
     [Dagger2 注入多个module](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/dagger2/Dagger2Activity.java)
  - 2017年12月07日
  
