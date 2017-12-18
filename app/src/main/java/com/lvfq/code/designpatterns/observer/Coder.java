@@ -10,7 +10,7 @@ import java.util.Observer;
  * @Github: https://github.com/lvfaqiang
  * @Blog: http://blog.csdn.net/lv_fq
  * @date 2017/11/29 下午11:37
- * @desc :
+ * @desc : 观察者
  */
 
 public class Coder implements Observer {

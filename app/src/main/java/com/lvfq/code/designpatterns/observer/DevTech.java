@@ -9,7 +9,7 @@ import java.util.Observable;
  * @Github: https://github.com/lvfaqiang
  * @Blog: http://blog.csdn.net/lv_fq
  * @date 2017/11/29 下午11:38
- * @desc :
+ * @desc : 被观察者
  */
 
 public class DevTech extends Observable {
