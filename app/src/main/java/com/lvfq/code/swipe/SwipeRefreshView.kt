@@ -16,22 +16,24 @@ import com.lvfq.code.R
  * @Github: https://github.com/lvfaqiang
  * @Blog: http://blog.csdn.net/lv_fq
  * @date 2017/11/20 上午10:39
- * @desc :
+ * @desc : SwipeRefreshLayout + RecyclerView 结合 BaseRecyclerViewAdapterHelper
  *
  */
-class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs), BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
+class SwipeRefreshView(context: Context) : FrameLayout(context), BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
 
-    var swipeView: SwipeRefreshLayout = SwipeRefreshLayout(context)
+    constructor(context: Context, attrs: AttributeSet) : this(context)
+
+    private var swipeView: SwipeRefreshLayout = SwipeRefreshLayout(context)
     private var recyclerView: RecyclerView
-    private lateinit var mAdapter: BaseQuickAdapter<Any, BaseViewHolder>
+    private lateinit var mAdapter: BaseQuickAdapter<*, BaseViewHolder>
 
 
     var swipeRefreshListener: SwipeRefreshListener? = null
 
     // 是否可刷新
-    private var isCanRefresh = true
+    private var isCanRefresh = false
     // 是否可加载更多
-    private var isCanLoadMore = true
+    private var isCanLoadMore = false
 
 
     init {
@@ -56,12 +58,38 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
     }
 
     /**
+     * 初始化配置
+     */
+    fun initOptions(options: ConfigOptions) {
+        recyclerView.layoutManager = options.layoutManager()
+        // 对外提供 RecyclerView
+        options.configRecyclerView(recyclerView)
+        // 对外提供 SwipeRefreshLayout
+        options.configSwipeRefreshLayout(swipeView)
+        // 对内提供 Adapter
+        mAdapter = options.configAdapter()
+        initAdapter()
+        // 是否可刷新
+        setEnableRefresh(options.setEnableRefresh())
+        // 是否可加载
+        setEnableLoadMore(options.setEnableLoadMore())
+    }
+
+    /**
      * 获取 Adapter
      */
-    fun getAdapter(): BaseQuickAdapter<Any, BaseViewHolder> = mAdapter
+    fun getAdapter(): BaseQuickAdapter<*, BaseViewHolder> {
+        checkInited()
+        return mAdapter
+    }
 
-    // 获取 RecyclerView
+    // 获取 RecyclerView 实例
     fun getRecyclerView(): RecyclerView = recyclerView
+
+    /**
+     * 获取 SwipeRefreshLayout 实例
+     */
+    fun getSwipeRefreshLayout(): SwipeRefreshLayout = swipeView
 
     fun setProgressBackgroundColorSchemeColor(color: Int) {
         swipeView.setProgressBackgroundColorSchemeColor(color)
@@ -74,22 +102,15 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
     /**
      * 设置 RecyclerView LayoutManager
      */
-    fun setLayoutManager(layoutManager: RecyclerView.LayoutManager) {
+    private fun setLayoutManager(layoutManager: RecyclerView.LayoutManager) {
         recyclerView.layoutManager = layoutManager
-    }
-
-    /**
-     * 设置 Adapter 并初始化
-     */
-    fun setAdapter(adapter: BaseQuickAdapter<Any, BaseViewHolder>) {
-        mAdapter = adapter
-        initAdapter()
     }
 
     /**
      * 初始化 Adapter
      */
     private fun initAdapter() {
+//        recyclerView.layoutManager ?: let { throw NullPointerException("Please invoke the setLayoutManager method first") }
         mAdapter.setEnableLoadMore(isCanLoadMore)
         mAdapter.setOnLoadMoreListener(this, recyclerView)
         recyclerView.adapter = mAdapter
@@ -117,6 +138,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      */
     fun setEnableLoadMore(isCanLoadMore: Boolean) {
         this.isCanLoadMore = isCanLoadMore
+        checkInited()
         mAdapter.setEnableLoadMore(isCanLoadMore)
     }
 
@@ -124,6 +146,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 设置空布局
      */
     fun setEmptyView(view: View) {
+        checkInited()
         mAdapter.emptyView = view
     }
 
@@ -131,6 +154,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 设置空布局
      */
     fun setEmptyView(layoutId: Int) {
+        checkInited()
         mAdapter.setEmptyView(layoutId)
     }
 
@@ -138,6 +162,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 加载到最后一页
      */
     fun loadMoreEnd() {
+        checkInited()
         mAdapter.loadMoreEnd()
         reset()
     }
@@ -148,6 +173,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 是否显示加载完成布局
      */
     fun loadMoreEnd(gone: Boolean) {
+        checkInited()
         mAdapter.loadMoreEnd(gone)
         reset()
     }
@@ -156,6 +182,7 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 当前页加载完成，非最后一页
      */
     fun loadMoreComplete() {
+        checkInited()
         mAdapter.loadMoreComplete()
         reset()
     }
@@ -164,12 +191,14 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
      * 加载失败
      */
     fun loadMoreFail() {
+        checkInited()
         mAdapter.loadMoreFail()
         reset()
     }
 
     // swipeRefreshLayout 刷新方法
     override fun onRefresh() {
+        checkInited()
         mAdapter.setEnableLoadMore(false)
         if (swipeRefreshListener != null) {
             swipeRefreshListener?.onRefresh()
@@ -177,13 +206,44 @@ class SwipeRefreshView(context: Context, attrs: AttributeSet) : FrameLayout(cont
     }
 
     private fun reset() {
+        checkInited()
         mAdapter.setEnableLoadMore(isCanLoadMore)
         swipeView.isEnabled = isCanRefresh
         swipeView.isRefreshing = false
     }
 
+    /**
+     *
+     */
+    private fun checkInited() {
+        if (!::mAdapter.isInitialized) {
+            throw IllegalAccessException(" invoke the initOption method first please")
+        }
+    }
+
     interface SwipeRefreshListener {
         fun onRefresh()
         fun onLoadMoreRequested()
+    }
+
+    interface ConfigOptions {
+
+        // 初始化 layoutmanager
+        fun layoutManager(): RecyclerView.LayoutManager
+
+        // 初始化 Adapter
+        fun configAdapter(): BaseQuickAdapter<*, BaseViewHolder>
+
+        // 获取当前 SwipeRefreshLayout
+        fun configSwipeRefreshLayout(refreshLayout: SwipeRefreshLayout) = Unit
+
+        // 获取当前的 RecyclerView
+        fun configRecyclerView(recyclerView: RecyclerView) = Unit
+
+        // 设置是否可刷新
+        fun setEnableRefresh(): Boolean = false
+
+        // 设置是否可加载更多
+        fun setEnableLoadMore(): Boolean = false
     }
 }
