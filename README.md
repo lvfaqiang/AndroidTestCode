@@ -2,6 +2,9 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2017年12月27日
+ 
+    [Dagger.android 测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/dagger_android)
  - 2017年12月11日
  
     [Dagger2 Singleton ,自定义 Scope 测试](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/dagger2)<br/>

@@ -65,4 +65,9 @@ dependencies {
     implementation project(':javaLib')
     implementation 'com.google.dagger:dagger:2.13'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+
+    // dagger.android 依赖包
+    implementation 'com.google.dagger:dagger-android:2.13'
+    implementation 'com.google.dagger:dagger-android-support:2.13' // 如果使用 support library
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.13'
 }
