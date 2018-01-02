@@ -26,6 +26,8 @@ import dagger.android.HasActivityInjector;
  * 实现 supportFragmentInjector() 方法,
  * <p>
  * 这里只是测试，就只注入了 Activity 类，
+ * 一般情况下， Application 中 只需要实现 HasActivityInjector 接口，
+ * 当 某一个 Activity 中包含 Fragment 时，才需要在 该 Activity 中 再实现 HasSupportFragmentInjector接口
  */
 
 public class DaggerAndroidApp extends MyApplication implements HasActivityInjector {

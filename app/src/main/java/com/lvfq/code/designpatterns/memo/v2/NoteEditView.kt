@@ -14,9 +14,15 @@ import com.lvfq.code.designpatterns.memo.MemoBean
  * @desc :
  *
  */
-class NoteEditView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+class NoteEditView constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
     : AppCompatEditText(context, attrs, defStyleAttr) {
 
+    constructor(
+            context: Context,
+            attrs: AttributeSet?
+    ) : this(context, attrs, 0)
+
+    constructor(context: Context) : this(context, null)
 
     fun createMemo(): MemoBean {
         return MemoBean(text.toString(), selectionStart)

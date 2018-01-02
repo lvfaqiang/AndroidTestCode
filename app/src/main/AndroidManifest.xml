@@ -12,14 +12,14 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".dagger_android.DaggerAndroidApp"
+        android:name=".architectureComponents.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.lvfq.code.dagger_android.DAActivity1">
+        <activity android:name="com.lvfq.code.architectureComponents.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

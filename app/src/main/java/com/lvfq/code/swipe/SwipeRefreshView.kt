@@ -19,9 +19,9 @@ import com.lvfq.code.R
  * @desc : SwipeRefreshLayout + RecyclerView 结合 BaseRecyclerViewAdapterHelper
  *
  */
-class SwipeRefreshView(context: Context) : FrameLayout(context), BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
+class SwipeRefreshView(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs), BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
 
-    constructor(context: Context, attrs: AttributeSet) : this(context)
+    constructor(context: Context) : this(context, null)
 
     private var swipeView: SwipeRefreshLayout = SwipeRefreshLayout(context)
     private var recyclerView: RecyclerView
@@ -120,9 +120,7 @@ class SwipeRefreshView(context: Context) : FrameLayout(context), BaseQuickAdapte
     // baseAdapter 刷新方法
     override fun onLoadMoreRequested() {
         swipeView.isEnabled = false
-        if (swipeRefreshListener != null) {
-            swipeRefreshListener?.onLoadMoreRequested()
-        }
+        swipeRefreshListener?.onLoadMoreRequested()
     }
 
     /**

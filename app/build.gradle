@@ -4,9 +4,11 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt' // kapt 插件
+
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '26.0.3'
     defaultConfig {
         applicationId "com.lvfq.code"
         minSdkVersion 15
@@ -35,6 +37,10 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -44,9 +50,14 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    //    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+//    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.lfq:AndroidUtils:1.1.6'
     compile 'com.lfq:MultiImageSelector:1.4'
@@ -64,10 +75,16 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     implementation project(':javaLib')
     implementation 'com.google.dagger:dagger:2.13'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+    kapt 'com.google.dagger:dagger-compiler:2.13'
 
     // dagger.android 依赖包
     implementation 'com.google.dagger:dagger-android:2.13'
     implementation 'com.google.dagger:dagger-android-support:2.13' // 如果使用 support library
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.13'
+    kapt 'com.google.dagger:dagger-android-processor:2.13'
+
+    // 添加依赖官方文档 ： https://developer.android.com/topic/libraries/architecture/adding-components.html
+    implementation "android.arch.lifecycle:extensions:1.0.0"
+    kapt "android.arch.lifecycle:compiler:1.0.0"
+    // Java8 support for Lifecycles
+    implementation "android.arch.lifecycle:common-java8:1.0.0"
 }

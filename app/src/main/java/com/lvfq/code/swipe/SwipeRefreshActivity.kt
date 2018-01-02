@@ -46,7 +46,7 @@ class SwipeRefreshActivity : AppCompatActivity(), SwipeRefreshView.SwipeRefreshL
     private fun initView() {
         // 模拟页面初始化数据请求，
         onRefresh()
-//        mList.addAll(getList())
+//        mList.addAll(sendRequset())
 
         initAdapter()
 

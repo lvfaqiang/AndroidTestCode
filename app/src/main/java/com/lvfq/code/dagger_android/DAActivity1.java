@@ -17,7 +17,7 @@ import okhttp3.OkHttpClient;
  * @author FaQiang on 2017/12/24 上午12:40
  * @Github: <a href="https://github.com/lvfaqiang"/>
  * @Blog: <a href="http://blog.csdn.net/lv_fq"/>
- * @desc :
+ * @desc : 更多介绍参考 <a href="http://blog.csdn.net/IO_Field/article/details/71730248" />
  */
 
 public class DAActivity1 extends AppCompatActivity {
