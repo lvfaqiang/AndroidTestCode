@@ -27,7 +27,7 @@
     [迭代器模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/iterator) <font color="blue"> - 摘自 Android源码设计模式解析与实战</font>
  - 2017年12月03日
     
-    [备忘录模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/memo)(遗留问题，基于Kotlin：EditText复写之后，无法获取焦点) <font color="blue"> - 摘自 Android源码设计模式解析与实战</font><br/>
+    [备忘录模式](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/designpatterns/memo) <font color="blue"> - 摘自 Android源码设计模式解析与实战</font><br/>
  - 2017年11月30日
  
     [带红色 * 号文本](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/view/MustTextView.kt)(标注必选项)
