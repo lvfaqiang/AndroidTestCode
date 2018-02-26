@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.lvfq.code.architectureComponents.ui.MainActivity">
+        <activity android:name="com.lvfq.code.custom.column_1.CustomViewCanvas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
