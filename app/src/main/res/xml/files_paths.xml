@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resouce xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--path：需要临时授权访问的路径（.代表在相机调用时候访问的是所有路径，而文件写入时访问的路径是Android/data/com.ijuyin.prints.news/）-->
+    <!--name： 是你为设置的这个访问路径起的名字-->
+    <paths>
+        <external-path
+            name="camera_photos"
+            path="." />
+        <external-path
+            name="files_root"
+            path="Android/data/com.lvfq.code/" />
+        <external-path
+            name="external_storage_root"
+            path="." />
+    </paths>
+</resouce>

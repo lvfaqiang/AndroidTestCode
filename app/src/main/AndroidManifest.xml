@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.lvfq.code.custom.column_1.CustomViewCanvas">
+        <activity android:name=".file_provider.FileProviderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +32,20 @@
 
         <activity android:name="me.lvfq.multi_image_selector.MultiImageSelectorActivity" />
         <activity android:name="me.lvfq.multi_image_selector.ImagePagerActivity" />
+
+        <!--<activity android:name=".file_provider.FileProviderActivity" />-->
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.lvfq.code.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files_paths" />
+        </provider>
+
 
         <service
             android:name=".aidl.BankService"
