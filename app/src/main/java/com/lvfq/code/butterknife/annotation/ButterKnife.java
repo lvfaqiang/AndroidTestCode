@@ -28,16 +28,22 @@ public class ButterKnife {
 
 
     private static void bindView(Activity activity) throws Exception {
+        //1 获取字节码对象
         Class<? extends Activity> aClass = activity.getClass();
+        // 2， 获取所有属性（包括私有属性）
         Field[] declaredFields = aClass.getDeclaredFields();
+        // 3,遍历所有属性
         for (Field declaredField : declaredFields) {
             // 允许暴力反射（可操作 private 修饰属性）
             declaredField.setAccessible(true);
 
             BindView annotation = declaredField.getAnnotation(BindView.class);
             if (annotation != null) {
+                // 4 ， 获取注解上的值
                 int id = annotation.value();
+                // 5 , 实例化控件。
                 View viewById = activity.findViewById(id);
+                // 6，控件赋值。
                 declaredField.set(activity, viewById);
             }
         }
