@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".file_provider.FileProviderActivity">
+        <activity android:name=".butterknife.ButterKnifeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
