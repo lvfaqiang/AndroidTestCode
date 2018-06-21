@@ -2,6 +2,9 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2018年06月18日
+
+    [7.0 拍照适配测试](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/file_provider/FileProviderActivity.java)
  - 2018年02月26日
  
     [Canvas 的基本用法](https://github.com/lvfaqiang/AndroidTestCode/tree/master/app/src/main/java/com/lvfq/code/custom/column_1/CanvasTestView1)
