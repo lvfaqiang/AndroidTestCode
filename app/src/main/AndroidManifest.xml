@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".butterknife.ButterKnifeActivity">
+        <activity android:name=".payment.PaymentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +32,7 @@
 
         <activity android:name="me.lvfq.multi_image_selector.MultiImageSelectorActivity" />
         <activity android:name="me.lvfq.multi_image_selector.ImagePagerActivity" />
+        <activity android:name=".payment.CusKeyBoardActivity" />
 
         <!--<activity android:name=".file_provider.FileProviderActivity" />-->
 

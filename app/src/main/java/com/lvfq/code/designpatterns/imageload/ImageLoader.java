@@ -37,7 +37,7 @@ public class ImageLoader {
      * @param url
      * @param imageView
      */
-    public void display(String url, ImageView imageView) {
+    public void display(final String url, final ImageView imageView) {
         // 先获取一下缓存
         Bitmap bitmap = mImageCache.get(url);
         if (bitmap != null) {

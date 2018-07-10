@@ -49,10 +49,10 @@ public class ButterKnife {
         }
     }
 
-    private static void bindOnClick(Activity activity) {
+    private static void bindOnClick(final Activity activity) {
         Class<? extends Activity> aClass = activity.getClass();
         Method[] methods = aClass.getMethods();
-        for (Method method : methods) {
+        for (final Method method : methods) {
             method.setAccessible(true);
             OnClick annotation = method.getAnnotation(OnClick.class);
             if (annotation != null) {

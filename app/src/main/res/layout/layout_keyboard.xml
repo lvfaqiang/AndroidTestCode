@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/kb_tv_1"
+            style="@style/keyboard_text_style"
+            android:text="1" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_2"
+            style="@style/keyboard_text_style"
+            android:text="2" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_3"
+            style="@style/keyboard_text_style"
+            android:text="3" />
+
+    </LinearLayout>
+
+    <View style="@style/keyboard_hor_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/kb_tv_4"
+            style="@style/keyboard_text_style"
+            android:text="4" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_5"
+            style="@style/keyboard_text_style"
+            android:text="5" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_6"
+            style="@style/keyboard_text_style"
+            android:text="6" />
+
+    </LinearLayout>
+
+    <View style="@style/keyboard_hor_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/kb_tv_7"
+            style="@style/keyboard_text_style"
+            android:text="7" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_8"
+            style="@style/keyboard_text_style"
+            android:text="8" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_9"
+            style="@style/keyboard_text_style"
+            android:text="9" />
+
+    </LinearLayout>
+
+    <View style="@style/keyboard_hor_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/keyboard_text_style"
+            android:background="#f5f6f8" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_0"
+            style="@style/keyboard_text_style"
+            android:text="0" />
+
+        <View style="@style/keyboard_ver_line" />
+
+        <TextView
+            android:id="@+id/kb_tv_del"
+            style="@style/keyboard_text_style"
+            android:background="#f5f6f8" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

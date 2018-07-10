@@ -2,6 +2,13 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2018年07月10日
+
+    [自定义数字键盘](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/payment/)
+    ```
+    方式一 ， 简单的写了个 xml 布局，然后实现输入效果。
+    方式二 ， 借助系统的 KeyBoardView 定义一个数字键盘。
+    ```
  - 2018年06月21日
 
     [模拟一下 ButterKnife](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/butterknife/)

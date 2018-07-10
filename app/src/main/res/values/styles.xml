@@ -12,4 +12,42 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+
+
+    <style name="textview_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#2a3753</item>
+        <item name="android:textSize">@dimen/sp_25</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <style name="keyboard_line_base">
+        <item name="android:background">#f5f6f8</item>
+    </style>
+
+    <style name="keyboard_hor_line" parent="keyboard_line_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+    </style>
+
+    <style name="keyboard_ver_line" parent="keyboard_line_base">
+        <item name="android:layout_width">@dimen/dp_1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="keyboard_text_style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/select_s_e3e7ed_n_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_28</item>
+        <item name="android:textColor">#293753</item>
+    </style>
+
 </resources>
