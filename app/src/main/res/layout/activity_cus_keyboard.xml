@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,5 +22,10 @@
         android:id="@+id/ck_kv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_9b"
+        app:keyBackground="@drawable/select_s_e3e7ed_n_white"
+        app:keyTextColor="@color/red"
+        app:keyTextSize="@dimen/sp_28"
+        app:labelTextSize="@dimen/sp_28" />
 </RelativeLayout>

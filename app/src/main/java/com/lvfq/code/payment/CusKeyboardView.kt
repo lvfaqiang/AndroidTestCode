@@ -1,15 +1,12 @@
 package com.lvfq.code.payment
 
 import android.content.Context
-import android.os.Build
-import android.text.InputType
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
 import com.lvfq.code.R
 import kotlinx.android.synthetic.main.layout_keyboard.view.*
-import java.lang.reflect.Method
 
 
 /**
@@ -99,28 +96,6 @@ class CusKeyboardView(context: Context, attrs: AttributeSet? = null, defStyleAtt
             if (start > 0) {
                 it.editableText.delete(start - 1, start)
             }
-        }
-    }
-
-    fun hideSystemSoftKeyboard(editText: EditText) {
-        val sdkInt = Build.VERSION.SDK_INT
-        if (sdkInt >= 11) {
-            try {
-                val cls = EditText::class.java
-                val setShowSoftInputOnFocus: Method
-                setShowSoftInputOnFocus = cls.getMethod("setShowSoftInputOnFocus", Boolean::class.javaPrimitiveType)
-                setShowSoftInputOnFocus.isAccessible = true
-                setShowSoftInputOnFocus.invoke(editText, false)
-            } catch (e: SecurityException) {
-                e.printStackTrace()
-            } catch (e: NoSuchMethodException) {
-                e.printStackTrace()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-
-        } else {
-            editText.inputType = InputType.TYPE_NULL
         }
     }
 

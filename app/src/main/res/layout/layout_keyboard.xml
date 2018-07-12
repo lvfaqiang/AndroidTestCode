@@ -110,7 +110,8 @@
         <TextView
             android:id="@+id/kb_tv_del"
             style="@style/keyboard_text_style"
-            android:background="#f5f6f8" />
+            android:text="删除"
+            android:textSize="@dimen/sp_20" />
 
     </LinearLayout>
 

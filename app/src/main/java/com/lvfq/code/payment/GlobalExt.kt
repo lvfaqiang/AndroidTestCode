@@ -1,7 +1,11 @@
 package com.lvfq.code.payment
 
+import android.os.Build
 import android.support.annotation.DrawableRes
+import android.text.InputType
+import android.widget.EditText
 import android.widget.TextView
+import java.lang.reflect.Method
 
 /**
  * GlobalExt
@@ -40,4 +44,27 @@ fun TextView.draw(@DrawableRes res: Int?, position: Position) {
 
 enum class Position {
     LEFT, RIGHT, TOP, BOTTOM
+}
+
+
+fun hideSystemSoftKeyboard(editText: EditText) {
+    val sdkInt = Build.VERSION.SDK_INT
+    if (sdkInt >= 11) {
+        try {
+            val cls = EditText::class.java
+            val setShowSoftInputOnFocus: Method
+            setShowSoftInputOnFocus = cls.getMethod("setShowSoftInputOnFocus", Boolean::class.javaPrimitiveType)
+            setShowSoftInputOnFocus.isAccessible = true
+            setShowSoftInputOnFocus.invoke(editText, false)
+        } catch (e: SecurityException) {
+            e.printStackTrace()
+        } catch (e: NoSuchMethodException) {
+            e.printStackTrace()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+    } else {
+        editText.inputType = InputType.TYPE_NULL
+    }
 }
