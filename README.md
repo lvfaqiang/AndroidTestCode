@@ -2,6 +2,9 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2018年07月12日
+
+    [渐变圆形进度条](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/view/ViewMainActivity.kt)
  - 2018年07月10日
 
     [自定义数字键盘](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/payment/)

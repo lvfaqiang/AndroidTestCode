@@ -71,4 +71,29 @@
         <attr name="shadowColor" />
         <attr name="shadowRadius" />
     </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressBar">
+        <!--文字大小-->
+        <attr name="text_size" format="dimension" />
+        <!--文字颜色-->
+        <attr name="text_color" format="color" />
+        <!--文本-->
+        <attr name="text" format="string" />
+        <!--变宽宽度-->
+        <attr name="stroke_width" format="integer" />
+        <!--未走的进度的颜色-->
+        <attr name="normal_color" format="color" />
+        <!--已走的进度的颜色-->
+        <attr name="progress_color" format="color" />
+        <!--完成的进度条颜色-->
+        <attr name="complete_color" format="color" />
+        <!--已走的进度 0-360 -->
+        <attr name="progress" format="integer" />
+        <!--类型 填充型，还是环形-->
+        <attr name="progress_style" format="enum">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
