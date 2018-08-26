@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".view.ViewMainActivity">
+        <activity android:name=".coroutines.eventbus.CoroutinesMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +33,8 @@
         <activity android:name="me.lvfq.multi_image_selector.MultiImageSelectorActivity" />
         <activity android:name="me.lvfq.multi_image_selector.ImagePagerActivity" />
         <activity android:name=".payment.CusKeyBoardActivity" />
+        <activity android:name=".coroutines.eventbus.CoroutinesSecondActivity" />
+        <activity android:name=".coroutines.eventbus.CoroutinesThreeActivity" />
 
         <!--<activity android:name=".file_provider.FileProviderActivity" />-->
 
