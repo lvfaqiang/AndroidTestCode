@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".coroutines.eventbus.CoroutinesMainActivity">
+        <activity android:name=".coroutines.thread_toggle.CoroutineToggleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
