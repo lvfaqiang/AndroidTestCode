@@ -18,4 +18,11 @@
         android:layout_height="wrap_content"
         android:onClick="button2"
         android:text="UI" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_b6"
+        android:textSize="@dimen/sp_14" />
 </LinearLayout>
