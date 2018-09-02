@@ -2,6 +2,10 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - 2018年09月02日
+
+    [获取、移除 View 的OnClickListener](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/view/click/ViewClickActivity.kt)
+
  - 2018年08月27日
 
     [Kotlin 协程+Channel 控制线程切换](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/coroutines/thread_toggle/CoroutineToggleActivity.kt)
