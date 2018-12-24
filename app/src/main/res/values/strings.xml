@@ -1,6 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources[
+    <!ENTITY brandName "Demo">
+    <!ENTITY brandWebSite "atc.bitsaas.tech">
+    ]>
+
 <resources>
-    <string name="app_name">MyWorkingTest</string>
+    <string name="app_name">&brandName;</string>
     <string name="str_login">登录</string>
     <string name="str_register">注册</string>
-
+    <string name="str_about">关于 &brandName; 相关介绍</string>
+    <string name="str_tips">温馨提示:\n 请仔细阅读 &brandName; 的使用说明</string>
+    <string name="str_webSite">官网地址: &brandWebSite;/ </string>
 </resources>

@@ -17,6 +17,10 @@ android {
         versionName "1.0"
         multiDexEnabled true
 //        jackOptions.enabled = true
+        manifestPlaceholders = [
+                APP_NAME      : "NAME1",
+                UMENG_CHANNEL_VALUE: "ocx"
+        ]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     compileOptions {

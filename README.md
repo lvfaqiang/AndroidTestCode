@@ -2,6 +2,7 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - [strings.xml 配置 brand、tag 等公共文本](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/res/values/strings.xml)
  - 2018年09月02日
 
     [获取、移除 View 的OnClickListener](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/view/click/ViewClickActivity.kt)

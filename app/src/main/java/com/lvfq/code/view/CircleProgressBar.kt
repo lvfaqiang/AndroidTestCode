@@ -31,8 +31,8 @@ class CircleProgressBar constructor(context: Context, attrs: AttributeSet? = nul
     private lateinit var mPaint: Paint
     private var strokeWidth = 5//线条宽度
     private var rectF: RectF? = null
-    private var normalColor = Color.parseColor("#A5A5A5")//普通的颜色
-    private var progressColor = Color.parseColor("#FA9025")//已经走了的进度条颜色
+    private var normalColor = resources.getColor(R.color.c_f8e71c)//普通的颜色
+    private var progressColor = resources.getColor(R.color.c_09c002)//已经走了的进度条颜色
     private var completeColor = 0
     private var textColor = normalColor//文字颜色
     private var textSize = 20f//文字大小
@@ -116,7 +116,8 @@ class CircleProgressBar constructor(context: Context, attrs: AttributeSet? = nul
         } else {
             mPaint.color = progressColor
         }
-        val colors = intArrayOf(0xFF5A66E8.toInt(), 0xFFDF97FF.toInt())
+//        val colors = intArrayOf(0xFF5A66E8.toInt(), 0xFFDF97FF.toInt())
+        val colors = intArrayOf(resources.getColor(R.color.c_11c111), resources.getColor(R.color.c_1495eb))
 
         val shader = LinearGradient(0f, 0f, mWidth.toFloat(), mHeight.toFloat(), colors, null, Shader.TileMode.CLAMP)
         mPaint.shader = shader

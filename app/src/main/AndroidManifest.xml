@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".animation.AnimationActivity">
+        <activity android:name=".view.ViewMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
