@@ -5,6 +5,7 @@
         <attr name="underlineColor" format="color" />
         <attr name="dividerColor" format="color" />
         <attr name="indicatorHeight" format="dimension" />
+        <attr name="indicatorWidth" format="dimension" />
         <attr name="indicatorPaddingLeftRight" format="dimension" />
         <attr name="underlineHeight" format="dimension" />
         <attr name="dividerPadding" format="dimension" />
@@ -16,7 +17,9 @@
         <attr name="tabDefTextSize" format="dimension" />
         <attr name="tabSelTextColor" format="color" />
         <attr name="tabDefTextColor" format="color" />
+        <attr name="isFixedIndicatorWidth" format="boolean" />
     </declare-styleable>
+
 
     <!--带 * 标注的文本标题 View-->
     <declare-styleable name="MustTextView">

@@ -2,6 +2,45 @@
 用于Android 日常代码测试，效果整理
 
 ### Update Log:
+ - PagerSlidingTabStrip 整理（对之前整理的进一步的调整）， [Kotlin 版本](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/view/PagerSlidingTabStrip.kt)、[Java版本](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/java/com/lvfq/code/tablayout/PagerSlidingTabStrip.java)
+    ```
+    <declare-styleable name="PagerSlidingTabStrip">
+            <!-- 指示器颜色 -->
+            <attr name="indicatorColor" format="color" />
+            <!-- 下划线颜色 -->
+            <attr name="underlineColor" format="color" />
+            <!-- 分割线颜色 -->
+            <attr name="dividerColor" format="color" />
+            <!-- 指示器高度 -->
+            <attr name="indicatorHeight" format="dimension" />
+            <!-- 指示器宽度 ，isFixedIndicatorWidth 为 true 时有效 -->
+            <attr name="indicatorWidth" format="dimension" />
+            <!-- 是否固定指示器宽度 -->
+            <attr name="isFixedIndicatorWidth" format="boolean" />
+            <!-- 指示器左右内边距 -->
+            <attr name="indicatorPaddingLeftRight" format="dimension" />
+            <!-- 下划线高度 -->
+            <attr name="underlineHeight" format="dimension" />
+            <!-- 分割线内边距 -->
+            <attr name="dividerPadding" format="dimension" />
+            <!-- 每个 Tab 的 左右内边距 -->
+            <attr name="tabPaddingLeftRight" format="dimension" />
+            <!-- 滚动偏移值 -->
+            <attr name="scrollOffset" format="dimension" />
+            <!-- tab 背景 -->
+            <attr name="tabBackground" format="reference" />
+            <!-- 暂时无用 -->
+            <attr name="shouldExpand" format="boolean" />
+            <!-- tab 选中文字大小 -->
+            <attr name="tabSelTextSize" format="dimension" />
+            <!-- tab 默认文字大小 -->
+            <attr name="tabDefTextSize" format="dimension" />
+            <!-- tab 选中文字颜色 -->
+            <attr name="tabSelTextColor" format="color" />
+            <!-- tab 默认文字颜色 -->
+            <attr name="tabDefTextColor" format="color" />
+        </declare-styleable>
+    ```
  - [strings.xml 配置 brand、tag 等公共文本](https://github.com/lvfaqiang/AndroidTestCode/blob/master/app/src/main/res/values/strings.xml)
  - 2018年09月02日
 
